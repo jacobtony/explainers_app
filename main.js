@@ -1,3 +1,6 @@
 console.log("JS enabled");
-var a = require("file.js");
-console.log(a);
+fetch('file.txt')
+  .then(response => response.text())
+  .then(text => {
+      document.getElementById("explainer").innerHTML = text;
+  })
